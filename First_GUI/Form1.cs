@@ -37,6 +37,7 @@ namespace First_GUI
 
             int x = rand.Next(widthOfForm-b.Size.Width); //Breite vom Fenster - Breite vom Button, damit dieser auch wirklich sichtbar bleibt
             int y = rand.Next(heigthOfForm - b.Size.Height); //Höhe vom Fenster - Höhe vom Button, damit dieser auch wirklich sichtbar bleibt;
+            b.Location = new Point(x, y);
         }
     }
 }
