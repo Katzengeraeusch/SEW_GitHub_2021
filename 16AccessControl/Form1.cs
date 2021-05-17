@@ -12,6 +12,8 @@ namespace _16AccessControl
 {
     public partial class Form1 : Form
     {
+        private AccessControl ac;
+        
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +36,14 @@ namespace _16AccessControl
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            int maxPersons = int.Parse(this.txtMaxPersons.Text);
+            this.ac = new AccessControl(maxPersons);
+            updateGUI();
+        }
 
+        private void updateGUI()
+        {
+            this.txtCurrentPersons.Text = this.ac.CurrentCount.ToString();
         }
     }
 }

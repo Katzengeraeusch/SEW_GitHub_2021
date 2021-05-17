@@ -95,7 +95,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "24MatheTrainer", "24MatheTr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25First_GUI", "First_GUI\25First_GUI.csproj", "{A6977382-2A28-48D6-B78D-831B02E0DFE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16AccessControl", "16AccessControl\16AccessControl.csproj", "{276F0252-B45E-43D4-888C-B1AEB35DB7F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26AccessControl", "16AccessControl\26AccessControl.csproj", "{276F0252-B45E-43D4-888C-B1AEB35DB7F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
