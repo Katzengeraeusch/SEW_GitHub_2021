@@ -31,6 +31,10 @@ namespace _16AccessControl
             return this.currentCount < this.maxCount;
         }
 
+        public bool canEnter(int persons)
+        {
+            return this.currentCount + persons <= this.maxCount && this.currentCount + persons >= 0;
+        }
         public void Increment()
         {
             this.currentCount++;
