@@ -50,6 +50,7 @@ namespace _16AccessControl
 
         private void updateGUI()
         {
+            //MessageBox.Show("Die GUI wird upgedatet");        MessageBox zum probieren
             this.txtCurrentPersons.Text = this.ac.CurrentCount.ToString();
             if(this.ac.CurrentCount <= 0)
             {
@@ -84,12 +85,16 @@ namespace _16AccessControl
         private void btnIncrement1_Click(object sender, EventArgs e)
         {
             this.ac.Increment();
+            this.txtIncrement.Text = "";
+            this.txtDecrement.Text = "";
             updateGUI();
         }
 
         private void btnDecrement1_Click(object sender, EventArgs e)
         {
             this.ac.Decrement();
+            this.txtDecrement.Text = "";
+            this.txtDecrement.Text = "";
             updateGUI();
         }
 
@@ -117,8 +122,8 @@ namespace _16AccessControl
         {
             try
             {
-                int persons = int.Parse(this.txtIncrement.Text);
-                this.ac.Increment(persons);
+                int incPersons = int.Parse(this.txtIncrement.Text);
+                this.ac.Increment(incPersons);
                 this.txtIncrement.Text = "";    //Wir löschen die eingabe, um sicherzustellen dass der Button nicht 2x gedrückt wird
                 updateGUI();
             }catch(Exception ex)
@@ -131,16 +136,31 @@ namespace _16AccessControl
         {
             try
             {
-                int input = int.Parse(this.txtIncrement.Text);
+                int input = int.Parse(this.txtDecrement.Text);
                 if (this.ac.canEnter(input))
                 {
-                    this.btnIncrement.Enabled = true;
+                    this.btnDecrement.Enabled = true;
                 }
                 else
                 {
-                    this.btnIncrement.Enabled = false;
+                    this.btnDecrement.Enabled = false;
                 }
 
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btnDecrement_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int decPersons = int.Parse(this.txtDecrement.Text);
+                this.ac.Decrement(decPersons);
+                this.txtIncrement.Text = "";    //Wir löschen die eingabe, um sicherzustellen dass der Button nicht 2x gedrückt wird
+                updateGUI();
             }
             catch (Exception ex)
             {

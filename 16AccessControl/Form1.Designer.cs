@@ -141,6 +141,7 @@ namespace _16AccessControl
             this.btnDecrement.TabIndex = 9;
             this.btnDecrement.Text = "verringern";
             this.btnDecrement.UseVisualStyleBackColor = true;
+            this.btnDecrement.Click += new System.EventHandler(this.btnDecrement_Click);
             // 
             // lbNoMorePersonsAllowed
             // 
