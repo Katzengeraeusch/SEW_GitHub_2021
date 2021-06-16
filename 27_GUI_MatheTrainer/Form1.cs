@@ -12,9 +12,9 @@ namespace _27_GUI_MatheTrainer
 {
     public partial class Form1 : Form
     {
-        private MatheTrainer[] formExercises;
-        private int nrOfExercises = 0;
-        private int i;
+        private MatheTrainer[] formExcercises;
+        private int nrOfExcercises = 0;
+        private int i=0;
         private int nrOfTries = 0;
         private int correctAnswers = 0;
         private int currentExcercise = 0;
@@ -35,42 +35,42 @@ namespace _27_GUI_MatheTrainer
         {
             try
             {
+
                 int result = int.Parse(this.txtErgebnis.Text);
 
-                if (result == this.formExercises[this.i].getResult())
+                if (result == this.formExcercises[i].getResult())
                 {
-                    //Richtige Antwort
-                    this.i++;
-                    this.lbCalcuate.Text = this.formExercises[i].excercise();
-                    this.nrOfTries = 0;
-                    this.lbWrongRight.Text = "Richtig!";
+                    // richtige Antwort
                     this.correctAnswers++;
-                    this.currentExcercise++;
-                    this.txtErgebnis.Text = "";
-                } else
+                    this.lbWrongRight.Text = "Richtiges Ergebnis!";
+                }
+                else
                 {
-                    // Falsche Antwort
-                    this.nrOfTries++;
-                    this.lbWrongRight.Text = "Nochmal probieren!";
-                    if (this.nrOfTries > 1)
+                    // falsche Antwort
+                    this.lbWrongRight.Text = "Falsche Antwort! Bitte nochmals probieren!";
+                    this.lbCalcuate.Text = this.formExcercises[i].excercise();
+                    result = int.Parse(this.txtErgebnis.Text);
+                    // Überprüfung der 2. Antwort
+                    if (result == this.formExcercises[i].getResult())
                     {
-                        this.txtErgebnis.Text = "";
-                        this.i++;
-                        this.lbCalcuate.Text = this.formExercises[i].excercise();
-                        this.nrOfTries = 0;
-                        this.lbWrongRight.Text = "Falsch!";
-                        this.currentExcercise++;
-                      
+                        this.correctAnswers++;
+                        this.lbWrongRight.Text = "Richtiges Ergebnis!";
+                    }
+                    else
+                    {
+                        this.lbWrongRight.Text = "Leider Falsch!";
                     }
                 }
+
+                this.lbCalcuate.Text = this.formExcercises[i].excercise();
                 
-                
-                if(this.currentExcercise == this.nrOfExercises)
+
+                if (this.i == this.nrOfExcercises)
                 {
-                    this.lbCalcuate.Visible = false;
                     statistik();
                 }
-                
+                i++;
+
             }
             catch(Exception ex)
             {
@@ -81,15 +81,15 @@ namespace _27_GUI_MatheTrainer
 
         private void startTraininig_Click(object sender, EventArgs e)
         {
-            this.nrOfExercises = int.Parse(this.txtNrOfCalculations.Text);
+            this.nrOfExcercises = int.Parse(this.txtNrOfCalculations.Text);
             this.range = int.Parse(this.txtRange.Text);
             //MTFactory Objekt erstellen
             //getExercises Property erstellen um Aufgaben auf zurufen
             MatheTrainerFactory mtf = new MatheTrainerFactory();
-            mtf.createTraining(this.nrOfExercises + 1, this.range);
-            this.formExercises = mtf.Exercises;
-            this.i = 0;
-            this.lbCalcuate.Text = this.formExercises[i].excercise();
+            mtf.createTraining(this.nrOfExcercises+1, this.range);
+            this.formExcercises = mtf.Exercises;
+            this.i = 1;
+            this.lbCalcuate.Text = this.formExcercises[i].excercise();
             this.startTraininig.Visible = false;
             this.lbCalcuate.Visible = true;
             this.lbWrongRight.Visible = true;
