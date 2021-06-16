@@ -101,11 +101,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "27_GUI_MatheTrainer", "27_G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test_3", "Test_3", "{3EFFD6B5-DC22-49CC-AE93-12A90FE48451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Nutztiere", "01Nutztiere\01Nutztiere.csproj", "{4F0BE99D-F07B-4D41-B403-7BA0D591627D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Nutztiere", "01Nutztiere\01Nutztiere.csproj", "{4F0BE99D-F07B-4D41-B403-7BA0D591627D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Addierer", "02Addierer\02Addierer.csproj", "{8CA5D5EC-861F-4101-870B-E5DD2440BA87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02Addierer", "02Addierer\02Addierer.csproj", "{8CA5D5EC-861F-4101-870B-E5DD2440BA87}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HU_Contact_Tracing", "HU_Contact_Tracing\HU_Contact_Tracing.csproj", "{B01EE96B-BD20-4A80-BD9C-F8EB641CA44F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28ImageBrowser", "28ImageBrowser\28ImageBrowser.csproj", "{5A09A5A3-F435-4E38-90D1-673F0F41E31F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,10 @@ Global
 		{B01EE96B-BD20-4A80-BD9C-F8EB641CA44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B01EE96B-BD20-4A80-BD9C-F8EB641CA44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B01EE96B-BD20-4A80-BD9C-F8EB641CA44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A09A5A3-F435-4E38-90D1-673F0F41E31F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A09A5A3-F435-4E38-90D1-673F0F41E31F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A09A5A3-F435-4E38-90D1-673F0F41E31F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A09A5A3-F435-4E38-90D1-673F0F41E31F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
