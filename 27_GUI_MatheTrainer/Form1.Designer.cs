@@ -106,9 +106,8 @@
             this.lbStatistik.AutoSize = true;
             this.lbStatistik.Location = new System.Drawing.Point(49, 311);
             this.lbStatistik.Name = "lbStatistik";
-            this.lbStatistik.Size = new System.Drawing.Size(50, 20);
+            this.lbStatistik.Size = new System.Drawing.Size(0, 20);
             this.lbStatistik.TabIndex = 6;
-            this.lbStatistik.Text = "label2";
             this.lbStatistik.Click += new System.EventHandler(this.lbStatistik_Click);
             // 
             // lbNrOfCalculations
