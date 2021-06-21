@@ -33,6 +33,7 @@
             this.lbFileLoaded = new System.Windows.Forms.Label();
             this.ofdImage = new System.Windows.Forms.OpenFileDialog();
             this.btnNext = new System.Windows.Forms.Button();
+            this.btnChangeList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,11 +81,22 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // btnChangeList
+            // 
+            this.btnChangeList.Location = new System.Drawing.Point(649, 402);
+            this.btnChangeList.Name = "btnChangeList";
+            this.btnChangeList.Size = new System.Drawing.Size(130, 36);
+            this.btnChangeList.TabIndex = 4;
+            this.btnChangeList.Text = "Ändere Dateiliste";
+            this.btnChangeList.UseVisualStyleBackColor = true;
+            this.btnChangeList.Click += new System.EventHandler(this.btnChangeList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnChangeList);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lbFileLoaded);
             this.Controls.Add(this.btnLoadImage);
@@ -105,6 +117,7 @@
         private System.Windows.Forms.Label lbFileLoaded;
         private System.Windows.Forms.OpenFileDialog ofdImage;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnChangeList;
     }
 }
 
