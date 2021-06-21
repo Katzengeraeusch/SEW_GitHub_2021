@@ -33,6 +33,7 @@ namespace _28ImageBrowser
                 {
                     string fileName = this.ofdImage.FileName;       // Multiselect --> False
                     this.lines = File.ReadAllLines(fileName);   // using System.IO          
+                    this.currentImage = 0;
                     this.lbFileLoaded.Text = fileName;
                     this.pbImage.ImageLocation = lines[0];
                     this.btnNext.Enabled = true;
@@ -52,11 +53,23 @@ namespace _28ImageBrowser
             int nrOfImages = this.lines.Length;
             if(this.currentImage > nrOfImages)
             {
-                this.currenImage = 0;
+                this.currentImage = 0;
                 //weitere Möglichkeit --> Button disablen
             }
-            this.pbImage.ImageLocation = this.lines[currentImage];
-            this.currentImage++;
+            if (this.currentImage > this.lines.Length)
+            {
+                this.pbImage.ImageLocation = this.lines[currentImage];
+                this.currentImage++;
+            }
+        }
+
+        private void btnChangeList_Click(object sender, EventArgs e)
+        {
+            FormAdFile fAddFille = new FormAdFile();
+            if(fAddFille.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
